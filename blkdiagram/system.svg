@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "svg10.dtd">
+<?xml-stylesheet href="MdtXdsSVG_Render.css" type="text/css"?><svg xmlns:svg="http://www.w3.org/2000/svg" xmlns:exsl="http://exslt.org/common" xmlns:xlink="http://www.w3.org/1999/xlink" width="2206" height="1667">
+  <defs>
+    <symbol id="BlkDiagram_Key">
+      <rect x="0" y="0" width="468" height="250" style="fill:#CCCCCC; stroke:;"/>
+      <rect x="0" y="0" width="468" height="16" style="fill:#CCCCCC; stroke:none;"/>
+      <text class="keytitle" x="234 " y="14">KEY</text>
+      <rect x="0" y="16" width="468" height="16" style="fill:#EEEEEE; stroke:none;"/>
+      <text class="keyheader" x="234 " y="30">SYMBOLS</text>
+      <use x="32" y="47" xlink:href="#KEY_Bif" transform="scale(0.75)"/>
+      <text class="keylabel" x="12" y="60">bus interface</text>
+      <use x="20" y="68" xlink:href="#KEY_SharedBus"/>
+      <text class="keylabel" x="12" y="85">shared bus</text>
+      <text class="keylblul" x="110" y="47">Bus connections</text>
+      <use x="110" y="58" xlink:href="#KEY_busconn_MASTER"/>
+      <text class="keylabel" x="140" y="72">master or initiator</text>
+      <use x="110" y="82" xlink:href="#KEY_busconn_SLAVE"/>
+      <text class="keylabel" x="140" y="96">slave or target</text>
+      <use x="110" y="106" xlink:href="#KEY_busconn_MASTER_SLAVE"/>
+      <text class="keylabel" x="140" y="120">master slave</text>
+      <use x="110" y="130" xlink:href="#KEY_busconn_MONITOR"/>
+      <text class="keylabel" x="140" y="144">monitor</text>
+      <text class="keylblul" x="258" y="47">External Ports</text>
+      <use x="258" y="58" xlink:href="#KEY_INPort"/>
+      <text class="keylabel" x="288" y="72">input</text>
+      <use x="258" y="78" xlink:href="#KEY_OUTPort"/>
+      <text class="keylabel" x="288" y="92">output</text>
+      <use x="258" y="98" xlink:href="#KEY_INOUTPort"/>
+      <text class="keylabel" x="288" y="112">inout</text>
+      <rect x="0" y="160" width="468" height="16" style="fill:#EEEEEE; stroke:none;"/>
+      <text class="keyheader" x="234 " y="172">COLORS</text>
+      <text class="keylblul" x="110" y="190">Bus Standards</text>
+      <rect x="12" y="200" width="20" height="20" style="fill:#6699FF; stroke:none;"/>
+      <text class="keylabel" x="36" y="220">DCR</text>
+      <rect x="12" y="224" width="20" height="20" style="fill:#3399FF; stroke:none;"/>
+      <text class="keylabel" x="36" y="240">FCB</text>
+      <rect x="80" y="200" width="20" height="20" style="fill:#CC00CC; stroke:none;"/>
+      <text class="keylabel" x="104" y="220">FSL</text>
+      <rect x="80" y="224" width="20" height="20" style="fill:#7777FF; stroke:none;"/>
+      <text class="keylabel" x="104" y="240">LMB</text>
+      <rect x="148" y="200" width="20" height="20" style="fill:#339900; stroke:none;"/>
+      <text class="keylabel" x="172" y="220">OPB</text>
+      <rect x="148" y="224" width="20" height="20" style="fill:#FFAA33; stroke:none;"/>
+      <text class="keylabel" x="172" y="240">PLB</text>
+      <rect x="216" y="200" width="20" height="20" style="fill:#0000DD; stroke:none;"/>
+      <text class="keylabel" x="240" y="220">SOCM</text>
+      <rect x="216" y="224" width="20" height="20" style="fill:#990066; stroke:none;"/>
+      <text class="keylabel" x="240" y="240">XIL (prefix) P2P</text>
+      <rect x="284" y="200" width="20" height="20" style="fill:#009999; stroke:none;"/>
+      <text class="keylabel" x="308" y="220">GEN. P2P, USER, etc</text>
+    </symbol>
+    <symbol id="BlkDiagram_Specs">
+      <rect x="0" y="0" width="300" height="100" style="fill:#CCCCCC; stroke:;"/>
+      <rect x="0" y="0" width="300" height="16" style="fill:#CCCCCC; stroke:none;"/>
+      <text class="keytitle" x="150 " y="14">SPECS</text>
+      <rect x="0" y="20" width="300" height="16" style="fill:#EEEEEE; stroke:none;"/>
+      <text class="specsheader" x="4" y="32">EDK VERSION</text>
+      <text class="specsvalue" x="262" y="32">8.1.02</text>
+      <rect x="0" y="40" width="300" height="16" style="fill:#EEEEEE; stroke:none;"/>
+      <text class="specsheader" x="4" y="52">ARCH</text>
+      <text class="specsvalue" x="249" y="52">virtex2p</text>
+      <rect x="0" y="60" width="300" height="16" style="fill:#EEEEEE; stroke:none;"/>
+      <text class="specsheader" x="4" y="72">PART</text>
+      <text class="specsvalue" x="197" y="72">xc2vp30ff896-7</text>
+      <rect x="0" y="80" width="300" height="16" style="fill:#EEEEEE; stroke:none;"/>
+      <text class="specsheader" x="4" y="92">GENERATED</text>
+      <text class="specsvalue" x="138.5" y="92">Sun Oct 01 02:21:39 2006 </text>
+    </symbol>
+    <symbol id="G_IOPort">
+      <rect x="0" y="0" width="16" height="16" style="fill:#CCCCFF; stroke:#000088; stroke-width:1"/>
+      <path class="ioport" d="M   0,0      L   16,8      L   0,16      Z" style="stroke:none; fill:#0000BB"/>
+    </symbol>
+    <symbol id="G_BIPort">
+      <rect x="0" y="0" width="16" height="16" style="fill:#CCCCFF; stroke:#000088; stroke-width:1"/>
+      <path class="btop" d="M 0,8      8,0      16,8      Z" style="stroke:none; fill:#0000BB"/>
+      <path class="bbot" d="M 0,8      8,16      16,8      Z" style="stroke:none; fill:#0000BB"/>
+    </symbol>
+    <symbol id="KEY_IOPort">
+      <rect x="0" y="0" width="16" height="16" style="fill:#888888; stroke:none;"/>
+      <path class="ioport" d="M   0,0      L   16,8      L   0,16      Z" style="stroke:none; fill:#444444"/>
+    </symbol>
+    <symbol id="KEY_BIPort">
+      <rect x="0" y="0" width="16" height="16" style="fill:#888888; stroke:none;"/>
+      <path class="btop" d="M 0,8      8,0      16,8      Z" style="stroke:none; fill:#444444"/>
+      <path class="bbot" d="M 0,8      8,16      16,8      Z" style="stroke:none; fill:#444444"/>
+    </symbol>
+    <symbol id="KEY_INPort">
+      <use x="0" y="0" xlink:href="#KEY_IOPort"/>
+      <rect x="16" y="0" width="8" height="16" style="fill:#0000BB; stroke:none;"/>
+    </symbol>
+    <symbol id="KEY_OUTPort">
+      <use x="0" y="0" xlink:href="#KEY_IOPort" transform="scale(-1,1) translate(-16,0)"/>
+      <rect x="16" y="0" width="8" height="16" style="fill:#0000BB; stroke:none;"/>
+    </symbol>
+    <symbol id="KEY_INOUTPort">
+      <use x="0" y="0" xlink:href="#KEY_BIPort"/>
+      <rect x="16" y="0" width="8" height="16" style="fill:#0000BB; stroke:none;"/>
+    </symbol>
+    <symbol id="OPB_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#339900; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="OPB_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#CCDDCC; stroke:#339900; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#339900; stroke:none;"/>
+    </symbol>
+    <symbol id="OPB_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#CCDDCC; stroke:#339900; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#339900; stroke:none;"/>
+    </symbol>
+    <symbol id="OPB_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#CCDDCC; stroke:#339900; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#339900; stroke:none;"/>
+    </symbol>
+    <symbol id="OPB_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#CCDDCC; stroke:#339900; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#339900; stroke:none;"/>
+    </symbol>
+    <symbol id="OPB_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#CCDDCC; stroke:#339900; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#339900; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#CCDDCC; stroke:#339900; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#339900; stroke:none;"/>
+    </symbol>
+    <symbol id="OPB_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#339900; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#339900; stroke:none;"/>
+    </symbol>
+    <symbol id="OPB_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#CCDDCC; stroke:#339900; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#339900; stroke:none;"/>
+    </symbol>
+    <symbol id="PLB_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#FFAA33; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="PLB_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFEE33; stroke:#FFAA33; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#FFAA33; stroke:none;"/>
+    </symbol>
+    <symbol id="PLB_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFEE33; stroke:#FFAA33; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#FFAA33; stroke:none;"/>
+    </symbol>
+    <symbol id="PLB_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFEE33; stroke:#FFAA33; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#FFAA33; stroke:none;"/>
+    </symbol>
+    <symbol id="PLB_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#FFEE33; stroke:#FFAA33; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#FFAA33; stroke:none;"/>
+    </symbol>
+    <symbol id="PLB_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFEE33; stroke:#FFAA33; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#FFAA33; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#FFEE33; stroke:#FFAA33; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#FFAA33; stroke:none;"/>
+    </symbol>
+    <symbol id="PLB_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#FFAA33; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#FFAA33; stroke:none;"/>
+    </symbol>
+    <symbol id="PLB_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#FFEE33; stroke:#FFAA33; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#FFAA33; stroke:none;"/>
+    </symbol>
+    <symbol id="LMB_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#7777FF; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="LMB_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#DDDDFF; stroke:#7777FF; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#7777FF; stroke:none;"/>
+    </symbol>
+    <symbol id="LMB_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#DDDDFF; stroke:#7777FF; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#7777FF; stroke:none;"/>
+    </symbol>
+    <symbol id="LMB_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#DDDDFF; stroke:#7777FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#7777FF; stroke:none;"/>
+    </symbol>
+    <symbol id="LMB_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#DDDDFF; stroke:#7777FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#7777FF; stroke:none;"/>
+    </symbol>
+    <symbol id="LMB_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#DDDDFF; stroke:#7777FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#7777FF; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#DDDDFF; stroke:#7777FF; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#7777FF; stroke:none;"/>
+    </symbol>
+    <symbol id="LMB_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#7777FF; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#7777FF; stroke:none;"/>
+    </symbol>
+    <symbol id="LMB_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#DDDDFF; stroke:#7777FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#7777FF; stroke:none;"/>
+    </symbol>
+    <symbol id="FSL_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#CC00CC; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="FSL_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFBBFF; stroke:#CC00CC; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#CC00CC; stroke:none;"/>
+    </symbol>
+    <symbol id="FSL_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFBBFF; stroke:#CC00CC; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#CC00CC; stroke:none;"/>
+    </symbol>
+    <symbol id="FSL_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFBBFF; stroke:#CC00CC; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#CC00CC; stroke:none;"/>
+    </symbol>
+    <symbol id="FSL_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#FFBBFF; stroke:#CC00CC; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#CC00CC; stroke:none;"/>
+    </symbol>
+    <symbol id="FSL_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFBBFF; stroke:#CC00CC; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#CC00CC; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#FFBBFF; stroke:#CC00CC; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#CC00CC; stroke:none;"/>
+    </symbol>
+    <symbol id="FSL_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#CC00CC; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#CC00CC; stroke:none;"/>
+    </symbol>
+    <symbol id="FSL_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#FFBBFF; stroke:#CC00CC; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#CC00CC; stroke:none;"/>
+    </symbol>
+    <symbol id="FCB_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#3399FF; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="FCB_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#CCDDFF; stroke:#3399FF; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#3399FF; stroke:none;"/>
+    </symbol>
+    <symbol id="FCB_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#CCDDFF; stroke:#3399FF; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#3399FF; stroke:none;"/>
+    </symbol>
+    <symbol id="FCB_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#CCDDFF; stroke:#3399FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#3399FF; stroke:none;"/>
+    </symbol>
+    <symbol id="FCB_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#CCDDFF; stroke:#3399FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#3399FF; stroke:none;"/>
+    </symbol>
+    <symbol id="FCB_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#CCDDFF; stroke:#3399FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#3399FF; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#CCDDFF; stroke:#3399FF; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#3399FF; stroke:none;"/>
+    </symbol>
+    <symbol id="FCB_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#3399FF; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#3399FF; stroke:none;"/>
+    </symbol>
+    <symbol id="FCB_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#CCDDFF; stroke:#3399FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#3399FF; stroke:none;"/>
+    </symbol>
+    <symbol id="XIL_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#990066; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="XIL_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#CC3399; stroke:#990066; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#990066; stroke:none;"/>
+    </symbol>
+    <symbol id="XIL_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#CC3399; stroke:#990066; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#990066; stroke:none;"/>
+    </symbol>
+    <symbol id="XIL_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#CC3399; stroke:#990066; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#990066; stroke:none;"/>
+    </symbol>
+    <symbol id="XIL_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#CC3399; stroke:#990066; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#990066; stroke:none;"/>
+    </symbol>
+    <symbol id="XIL_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#CC3399; stroke:#990066; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#990066; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#CC3399; stroke:#990066; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#990066; stroke:none;"/>
+    </symbol>
+    <symbol id="XIL_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#990066; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#990066; stroke:none;"/>
+    </symbol>
+    <symbol id="XIL_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#CC3399; stroke:#990066; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#990066; stroke:none;"/>
+    </symbol>
+    <symbol id="TRS_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#009999; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="TRS_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#CCCCCC; stroke:#009999; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRS_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#CCCCCC; stroke:#009999; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRS_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#CCCCCC; stroke:#009999; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRS_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#CCCCCC; stroke:#009999; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRS_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#CCCCCC; stroke:#009999; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#009999; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#CCCCCC; stroke:#009999; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRS_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#009999; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRS_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#CCCCCC; stroke:#009999; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="DCR_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#6699FF; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="DCR_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFFFFF; stroke:#6699FF; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#6699FF; stroke:none;"/>
+    </symbol>
+    <symbol id="DCR_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFFFFF; stroke:#6699FF; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#6699FF; stroke:none;"/>
+    </symbol>
+    <symbol id="DCR_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#6699FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#6699FF; stroke:none;"/>
+    </symbol>
+    <symbol id="DCR_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#6699FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#6699FF; stroke:none;"/>
+    </symbol>
+    <symbol id="DCR_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#6699FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#6699FF; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#FFFFFF; stroke:#6699FF; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#6699FF; stroke:none;"/>
+    </symbol>
+    <symbol id="DCR_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#6699FF; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#6699FF; stroke:none;"/>
+    </symbol>
+    <symbol id="DCR_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#6699FF; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#6699FF; stroke:none;"/>
+    </symbol>
+    <symbol id="DSOCM_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#0000DD; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="DSOCM_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="DSOCM_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="DSOCM_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="DSOCM_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="DSOCM_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#0000DD; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="DSOCM_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#0000DD; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="DSOCM_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="ISOCM_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#0000DD; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="ISOCM_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="ISOCM_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="ISOCM_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="ISOCM_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="ISOCM_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#0000DD; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="ISOCM_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#0000DD; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="ISOCM_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#FFFFFF; stroke:#0000DD; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#0000DD; stroke:none;"/>
+    </symbol>
+    <symbol id="TRANSPARENT_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#009999; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="TRANSPARENT_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#00CCCC; stroke:#009999; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRANSPARENT_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#00CCCC; stroke:#009999; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRANSPARENT_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#00CCCC; stroke:#009999; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRANSPARENT_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#00CCCC; stroke:#009999; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRANSPARENT_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#00CCCC; stroke:#009999; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#009999; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#00CCCC; stroke:#009999; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRANSPARENT_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#009999; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="TRANSPARENT_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#00CCCC; stroke:#009999; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#009999; stroke:none;"/>
+    </symbol>
+    <symbol id="KEY_Bif">
+      <rect x="0" y="0" rx="3" ry="3" width="32" height="16" style="fill:#444444; stroke:black; stroke-width:1"/>
+    </symbol>
+    <symbol id="KEY_busconn_MASTER">
+      <rect x="0" y="0" width="20" height="20" style="fill:#888888; stroke:#444444; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#444444; stroke:none;"/>
+    </symbol>
+    <symbol id="KEY_busconn_INITIATOR">
+      <rect x="0" y="0" width="20" height="20" style="fill:#888888; stroke:#444444; stroke-width:1"/>
+      <rect x="5.5" y="5" width="10" height="10" style="fill:#444444; stroke:none;"/>
+    </symbol>
+    <symbol id="KEY_busconn_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#888888; stroke:#444444; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#444444; stroke:none;"/>
+    </symbol>
+    <symbol id="KEY_busconn_TARGET">
+      <circle cx="10" cy="10" r="10" style="fill:#888888; stroke:#444444; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#444444; stroke:none;"/>
+    </symbol>
+    <symbol id="KEY_busconn_MASTER_SLAVE">
+      <circle cx="10" cy="10" r="10" style="fill:#888888; stroke:#444444; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#444444; stroke:none;"/>
+      <rect x="0" y="10" width="20" height="10" style="fill:#888888; stroke:#444444; stroke-width:1"/>
+      <rect x="5.5" y="10" width="10" height="5" style="fill:#444444; stroke:none;"/>
+    </symbol>
+    <symbol id="KEY_busconn_MONITOR">
+      <rect x="0" y="0.5" width="20" height="5" style="fill:#444444; stroke:none;"/>
+      <rect x="0" y="14" width="20" height="5" style="fill:#444444; stroke:none;"/>
+    </symbol>
+    <symbol id="KEY_busconn_TRANSPARENT">
+      <circle cx="10" cy="10" r="10" style="fill:#888888; stroke:#444444; stroke-width:1"/>
+      <circle cx="10.5" cy="10" r="5" style="fill:#444444; stroke:none;"/>
+    </symbol>
+    <symbol id="FSL_BusArrowEast">
+      <path class="bus" d="M   0,0      L     8, 4      L   0,8,       Z" style="stroke:none; fill:#CC00CC"/>
+    </symbol>
+    <symbol id="FSL_BusArrowWest">
+      <use x="0" y="0" xlink:href="#FSL_BusArrowEast" transform="scale(-1,1) translate(-8,0)"/>
+    </symbol>
+    <symbol id="FSL_BusArrowHInitiator">
+      <rect x="0" y="2" width="8" height="4" style="stroke:none; fill:#CC00CC"/>
+    </symbol>
+    <symbol id="XIL_BusArrowEast">
+      <path class="bus" d="M   0,0      L     8, 4      L   0,8,       Z" style="stroke:none; fill:#990066"/>
+    </symbol>
+    <symbol id="XIL_BusArrowWest">
+      <use x="0" y="0" xlink:href="#XIL_BusArrowEast" transform="scale(-1,1) translate(-8,0)"/>
+    </symbol>
+    <symbol id="XIL_BusArrowHInitiator">
+      <rect x="0" y="2" width="8" height="4" style="stroke:none; fill:#990066"/>
+    </symbol>
+    <symbol id="OPB_BusArrowEast">
+      <path class="bus" d="M   0,0      L     8, 4      L   0,8,       Z" style="stroke:none; fill:#339900"/>
+    </symbol>
+    <symbol id="OPB_BusArrowWest">
+      <use x="0" y="0" xlink:href="#OPB_BusArrowEast" transform="scale(-1,1) translate(-8,0)"/>
+    </symbol>
+    <symbol id="OPB_BusArrowHInitiator">
+      <rect x="0" y="2" width="8" height="4" style="stroke:none; fill:#339900"/>
+    </symbol>
+    <symbol id="PLB_BusArrowEast">
+      <path class="bus" d="M   0,0      L     8, 4      L   0,8,       Z" style="stroke:none; fill:#FFAA33"/>
+    </symbol>
+    <symbol id="PLB_BusArrowWest">
+      <use x="0" y="0" xlink:href="#PLB_BusArrowEast" transform="scale(-1,1) translate(-8,0)"/>
+    </symbol>
+    <symbol id="PLB_BusArrowHInitiator">
+      <rect x="0" y="2" width="8" height="4" style="stroke:none; fill:#FFAA33"/>
+    </symbol>
+    <symbol id="KEY_BusArrowEast">
+      <path class="bus" d="M   0,0      L     8, 4      L   0,8,       Z" style="stroke:none; fill:#444444"/>
+    </symbol>
+    <symbol id="KEY_BusArrowWest">
+      <use x="0" y="0" xlink:href="#KEY_BusArrowEast" transform="scale(-1,1) translate(-8,0)"/>
+    </symbol>
+    <symbol id="KEY_BusArrowHInitiator">
+      <rect x="0" y="2" width="8" height="4" style="stroke:none; fill:#444444"/>
+    </symbol>
+    <symbol id="OPB_BusArrowSouth">
+      <path class="bus" d="M   0,0      L   8,0      L   4, 8      Z" style="stroke:none; fill:#339900"/>
+    </symbol>
+    <symbol id="OPB_BusArrowNorth">
+      <use x="0" y="0" xlink:href="#OPB_BusArrowSouth" transform="scale(1,-1) translate(0,-8)"/>
+    </symbol>
+    <symbol id="OPB_BusArrowInitiator">
+      <rect x="2" y="0" width="4" height="8" style="stroke:none; fill:#339900"/>
+    </symbol>
+    <symbol id="LMB_BusArrowSouth">
+      <path class="bus" d="M   0,0      L   8,0      L   4, 8      Z" style="stroke:none; fill:#7777FF"/>
+    </symbol>
+    <symbol id="LMB_BusArrowNorth">
+      <use x="0" y="0" xlink:href="#LMB_BusArrowSouth" transform="scale(1,-1) translate(0,-8)"/>
+    </symbol>
+    <symbol id="LMB_BusArrowInitiator">
+      <rect x="2" y="0" width="4" height="8" style="stroke:none; fill:#7777FF"/>
+    </symbol>
+    <symbol id="FSL_BusArrowSouth">
+      <path class="bus" d="M   0,0      L   8,0      L   4, 8      Z" style="stroke:none; fill:#CC00CC"/>
+    </symbol>
+    <symbol id="FSL_BusArrowNorth">
+      <use x="0" y="0" xlink:href="#FSL_BusArrowSouth" transform="scale(1,-1) translate(0,-8)"/>
+    </symbol>
+    <symbol id="FSL_BusArrowInitiator">
+      <rect x="2" y="0" width="4" height="8" style="stroke:none; fill:#CC00CC"/>
+    </symbol>
+    <symbol id="FCB_BusArrowSouth">
+      <path class="bus" d="M   0,0      L   8,0      L   4, 8      Z" style="stroke:none; fill:#3399FF"/>
+    </symbol>
+    <symbol id="FCB_BusArrowNorth">
+      <use x="0" y="0" xlink:href="#FCB_BusArrowSouth" transform="scale(1,-1) translate(0,-8)"/>
+    </symbol>
+    <symbol id="FCB_BusArrowInitiator">
+      <rect x="2" y="0" width="4" height="8" style="stroke:none; fill:#3399FF"/>
+    </symbol>
+    <symbol id="XIL_BusArrowSouth">
+      <path class="bus" d="M   0,0      L   8,0      L   4, 8      Z" style="stroke:none; fill:#990066"/>
+    </symbol>
+    <symbol id="XIL_BusArrowNorth">
+      <use x="0" y="0" xlink:href="#XIL_BusArrowSouth" transform="scale(1,-1) translate(0,-8)"/>
+    </symbol>
+    <symbol id="XIL_BusArrowInitiator">
+      <rect x="2" y="0" width="4" height="8" style="stroke:none; fill:#990066"/>
+    </symbol>
+    <symbol id="TRS_BusArrowSouth">
+      <path class="bus" d="M   0,0      L   8,0      L   4, 8      Z" style="stroke:none; fill:#009999"/>
+    </symbol>
+    <symbol id="TRS_BusArrowNorth">
+      <use x="0" y="0" xlink:href="#TRS_BusArrowSouth" transform="scale(1,-1) translate(0,-8)"/>
+    </symbol>
+    <symbol id="TRS_BusArrowInitiator">
+      <rect x="2" y="0" width="4" height="8" style="stroke:none; fill:#009999"/>
+    </symbol>
+    <symbol id="DCR_BusArrowSouth">
+      <path class="bus" d="M   0,0      L   8,0      L   4, 8      Z" style="stroke:none; fill:#6699FF"/>
+    </symbol>
+    <symbol id="DCR_BusArrowNorth">
+      <use x="0" y="0" xlink:href="#DCR_BusArrowSouth" transform="scale(1,-1) translate(0,-8)"/>
+    </symbol>
+    <symbol id="DCR_BusArrowInitiator">
+      <rect x="2" y="0" width="4" height="8" style="stroke:none; fill:#6699FF"/>
+    </symbol>
+    <symbol id="DSOCM_BusArrowSouth">
+      <path class="bus" d="M   0,0      L   8,0      L   4, 8      Z" style="stroke:none; fill:#0000DD"/>
+    </symbol>
+    <symbol id="DSOCM_BusArrowNorth">
+      <use x="0" y="0" xlink:href="#DSOCM_BusArrowSouth" transform="scale(1,-1) translate(0,-8)"/>
+    </symbol>
+    <symbol id="DSOCM_BusArrowInitiator">
+      <rect x="2" y="0" width="4" height="8" style="stroke:none; fill:#0000DD"/>
+    </symbol>
+    <symbol id="ISOCM_BusArrowSouth">
+      <path class="bus" d="M   0,0      L   8,0      L   4, 8      Z" style="stroke:none; fill:#0000DD"/>
+    </symbol>
+    <symbol id="ISOCM_BusArrowNorth">
+      <use x="0" y="0" xlink:href="#ISOCM_BusArrowSouth" transform="scale(1,-1) translate(0,-8)"/>
+    </symbol>
+    <symbol id="ISOCM_BusArrowInitiator">
+      <rect x="2" y="0" width="4" height="8" style="stroke:none; fill:#0000DD"/>
+    </symbol>
+    <symbol id="PLB_SharedBus">
+      <use x="0" y="0" xlink:href="#PLB_BusArrowWest"/>
+      <use x="1980" y="0" xlink:href="#PLB_BusArrowEast"/>
+      <rect x="8" y="2" width="1972" height="4" style="stroke:none; fill:#FFAA33"/>
+    </symbol>
+    <symbol id="OPB_SharedBus">
+      <use x="0" y="0" xlink:href="#OPB_BusArrowWest"/>
+      <use x="1980" y="0" xlink:href="#OPB_BusArrowEast"/>
+      <rect x="8" y="2" width="1972" height="4" style="stroke:none; fill:#339900"/>
+    </symbol>
+    <symbol id="FSL_SplitBus_EAST">
+      <use x="0" y="0" xlink:href="#FSL_BusArrowWest"/>
+      <rect x="8" y="2" width="20" height="4" style="stroke:none; fill:#CC00CC"/>
+      <circle cx="28" cy="5" r="5" style="fill:#CC00CC; stroke:none;"/>
+    </symbol>
+    <symbol id="FSL_SplitBus_WEST">
+      <use x="0" y="0" xlink:href="#FSL_SplitBus_EAST" transform="scale(-1,1) translate(-38,0)"/>
+    </symbol>
+    <symbol id="XIL_SplitBus_EAST">
+      <use x="0" y="0" xlink:href="#XIL_BusArrowWest"/>
+      <rect x="8" y="2" width="20" height="4" style="stroke:none; fill:#990066"/>
+      <circle cx="28" cy="5" r="5" style="fill:#990066; stroke:none;"/>
+    </symbol>
+    <symbol id="XIL_SplitBus_WEST">
+      <use x="0" y="0" xlink:href="#XIL_SplitBus_EAST" transform="scale(-1,1) translate(-38,0)"/>
+    </symbol>
+    <symbol id="DCR_SplitBus_EAST">
+      <use x="0" y="0" xlink:href="#DCR_BusArrowWest"/>
+      <rect x="8" y="2" width="20" height="4" style="stroke:none; fill:#6699FF"/>
+      <circle cx="28" cy="5" r="5" style="fill:#6699FF; stroke:none;"/>
+    </symbol>
+    <symbol id="DCR_SplitBus_WEST">
+      <use x="0" y="0" xlink:href="#DCR_SplitBus_EAST" transform="scale(-1,1) translate(-38,0)"/>
+    </symbol>
+    <symbol id="FCB_SplitBus_EAST">
+      <use x="0" y="0" xlink:href="#FCB_BusArrowWest"/>
+      <rect x="8" y="2" width="20" height="4" style="stroke:none; fill:#3399FF"/>
+      <circle cx="28" cy="5" r="5" style="fill:#3399FF; stroke:none;"/>
+    </symbol>
+    <symbol id="FCB_SplitBus_WEST">
+      <use x="0" y="0" xlink:href="#FCB_SplitBus_EAST" transform="scale(-1,1) translate(-38,0)"/>
+    </symbol>
+    <symbol id="symbol_plb2opb">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="4" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="12">plb2opb_bridge</text>
+      <text class="bciplabel" x="45" y="20">plb2opb</text>
+      <use x="11" y="46" xlink:href="#PLB_Bif"/>
+      <text class="biflabel" x="27" y="57">SPLB</text>
+      <use x="47" y="46" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="63" y="57">MOPB</text>
+    </symbol>
+    <symbol id="group_sharedBusses">
+      <use x="0" y="0" xlink:href="#PLB_SharedBus"/>
+      <text class="sharedbuslabel" x="4" y="12">plb</text>
+      <use x="0" y="98" xlink:href="#OPB_SharedBus"/>
+      <text class="sharedbuslabel" x="4" y="110">opb</text>
+    </symbol>
+    <symbol id="KEY_SharedBus">
+      <use x="0" y="0" xlink:href="#KEY_BusArrowWest"/>
+      <use x="30" y="0" xlink:href="#KEY_BusArrowEast"/>
+      <rect x="8" y="2" width="22" height="4" style="stroke:none; fill:#444444"/>
+    </symbol>
+    <symbol id="sbsbktmodule_DDR_256MB_32MX64_rank1_row13_col10_cl2_5">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <rect x="11" y="44" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="58">B</text>
+      <text class="bciptype" x="45" y="32">plb_ddr</text>
+      <text class="bciplabel" x="45" y="40">DDR_256MB_32MX64_rank1_row13_col10_cl2_5</text>
+      <use x="29" y="4" xlink:href="#PLB_Bif"/>
+      <text class="biflabel" x="45" y="15">SPLB</text>
+    </symbol>
+    <symbol id="sbsbucket_plb">
+      <rect x="0" y="0" rx="4" ry="4" width="122" height="98" style="stroke-width:2; stroke:#FFAA33; fill:#FFEE33"/>
+      <use x="16" y="16" xlink:href="#sbsbktmodule_DDR_256MB_32MX64_rank1_row13_col10_cl2_5"/>
+    </symbol>
+    <symbol id="sbsbktmodule_Audio_Codec">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <rect x="11" y="44" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="58">A</text>
+      <text class="bciptype" x="45" y="32">opb_ac97</text>
+      <text class="bciplabel" x="45" y="40">Audio_Codec</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+    </symbol>
+    <symbol id="sbsbktmodule_DIPSWs_4Bit">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <rect x="11" y="44" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="58">C</text>
+      <text class="bciptype" x="45" y="32">opb_gpio</text>
+      <text class="bciplabel" x="45" y="40">DIPSWs_4Bit</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+      <rect x="72" y="0" rx="3" ry="3" width="18" height="9" style="fill:#FF9900; stroke:none; stroke-width:1"/>
+      <line x1="81" y1="0" x2="81" y2="9" style="stroke:#000000;stroke-width:1"/>
+      <text class="intrsymbol" x="74" y="8">2</text>
+      <text class="intrsymbol" x="83" y="8">0</text>
+    </symbol>
+    <symbol id="sbsbktmodule_LEDs_4Bit">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <rect x="11" y="44" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="58">D</text>
+      <text class="bciptype" x="45" y="32">opb_gpio</text>
+      <text class="bciplabel" x="45" y="40">LEDs_4Bit</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+    </symbol>
+    <symbol id="sbsbktmodule_PS2_Ports">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="32">opb_ps2_dual_ref</text>
+      <text class="bciplabel" x="45" y="40">PS2_Ports</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+      <rect x="72" y="0" rx="3" ry="3" width="18" height="9" style="fill:#FF9900; stroke:none; stroke-width:1"/>
+      <line x1="81" y1="0" x2="81" y2="9" style="stroke:#000000;stroke-width:1"/>
+      <text class="intrsymbol" x="74" y="8">0</text>
+      <text class="intrsymbol" x="83" y="8">0</text>
+      <rect x="72" y="12" rx="3" ry="3" width="18" height="9" style="fill:#FF9900; stroke:none; stroke-width:1"/>
+      <line x1="81" y1="12" x2="81" y2="21" style="stroke:#000000;stroke-width:1"/>
+      <text class="intrsymbol" x="74" y="20">1</text>
+      <text class="intrsymbol" x="83" y="20">0</text>
+    </symbol>
+    <symbol id="sbsbktmodule_PushButtons_5Bit">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <rect x="11" y="44" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="58">F</text>
+      <text class="bciptype" x="45" y="32">opb_gpio</text>
+      <text class="bciplabel" x="45" y="40">PushButtons_5Bit</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+      <rect x="72" y="0" rx="3" ry="3" width="18" height="9" style="fill:#FF9900; stroke:none; stroke-width:1"/>
+      <line x1="81" y1="0" x2="81" y2="9" style="stroke:#000000;stroke-width:1"/>
+      <text class="intrsymbol" x="74" y="8">3</text>
+      <text class="intrsymbol" x="83" y="8">0</text>
+    </symbol>
+    <symbol id="sbsbktmodule_RS232_Uart_1">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <rect x="11" y="44" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="58">G</text>
+      <text class="bciptype" x="45" y="32">opb_uartlite</text>
+      <text class="bciplabel" x="45" y="40">RS232_Uart_1</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+    </symbol>
+    <symbol id="sbsbktmodule_SysACE_CompactFlash">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <rect x="11" y="44" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="58">H</text>
+      <text class="bciptype" x="45" y="32">opb_sysace</text>
+      <text class="bciplabel" x="45" y="40">SysACE_CompactFlash</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+    </symbol>
+    <symbol id="sbsbktmodule_onewire_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <rect x="11" y="44" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="58">L</text>
+      <text class="bciptype" x="45" y="32">opb_onewire</text>
+      <text class="bciplabel" x="45" y="40">onewire_0</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+    </symbol>
+    <symbol id="sbsbktmodule_opb_intc_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="32">opb_intc</text>
+      <text class="bciplabel" x="45" y="40">opb_intc_0</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+      <rect x="81" y="3" rx="3" ry="3" width="9" height="18" style="fill:#FF9900; stroke:none; stroke-width:1"/>
+      <line x1="81" y1="8" x2="90" y2="8" style="stroke:#000000;stroke-width:2"/>
+      <text class="intrsymbol" x="83" y="20">0</text>
+    </symbol>
+    <symbol id="sbsbktmodule_opb_timer_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="32">opb_timer</text>
+      <text class="bciplabel" x="45" y="40">opb_timer_0</text>
+      <use x="29" y="4" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="45" y="15">SOPB</text>
+      <rect x="72" y="0" rx="3" ry="3" width="18" height="9" style="fill:#FF9900; stroke:none; stroke-width:1"/>
+      <line x1="81" y1="0" x2="81" y2="9" style="stroke:#000000;stroke-width:1"/>
+      <text class="intrsymbol" x="74" y="8">4</text>
+      <text class="intrsymbol" x="83" y="8">0</text>
+    </symbol>
+    <symbol id="sbsbucket_opb">
+      <rect x="0" y="0" rx="4" ry="4" width="334" height="344" style="stroke-width:2; stroke:#339900; fill:#CCDDCC"/>
+      <use x="16" y="16" xlink:href="#sbsbktmodule_Audio_Codec"/>
+      <use x="122" y="16" xlink:href="#sbsbktmodule_DIPSWs_4Bit"/>
+      <use x="228" y="16" xlink:href="#sbsbktmodule_LEDs_4Bit"/>
+      <use x="16" y="98" xlink:href="#sbsbktmodule_PS2_Ports"/>
+      <use x="122" y="98" xlink:href="#sbsbktmodule_PushButtons_5Bit"/>
+      <use x="228" y="98" xlink:href="#sbsbktmodule_RS232_Uart_1"/>
+      <use x="16" y="180" xlink:href="#sbsbktmodule_SysACE_CompactFlash"/>
+      <use x="122" y="180" xlink:href="#sbsbktmodule_onewire_0"/>
+      <use x="228" y="180" xlink:href="#sbsbktmodule_opb_intc_0"/>
+      <use x="16" y="262" xlink:href="#sbsbktmodule_opb_timer_0"/>
+    </symbol>
+    <symbol id="ipbktmodule_reset_block">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#000000; stroke-width:2"/>
+      <rect x="11" y="14" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="22">proc_sys_reset</text>
+      <text class="bciplabel" x="45" y="30">reset_block</text>
+      <rect x="11" y="34" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="48">M</text>
+    </symbol>
+    <symbol id="ipbktmodule_PS2_Ports_IO_ADAPTER">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#000000; stroke-width:2"/>
+      <rect x="11" y="14" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="22">dual_ps2_ioadapter</text>
+      <text class="bciplabel" x="45" y="30">PS2_Ports_IO_ADAPTER</text>
+      <rect x="11" y="34" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="48">E</text>
+    </symbol>
+    <symbol id="ipbktmodule_sysclk_inv">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#000000; stroke-width:2"/>
+      <rect x="11" y="14" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="22">util_vector_logic</text>
+      <text class="bciplabel" x="45" y="30">sysclk_inv</text>
+    </symbol>
+    <symbol id="ipbktmodule_clk90_inv">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#000000; stroke-width:2"/>
+      <rect x="11" y="14" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="22">util_vector_logic</text>
+      <text class="bciplabel" x="45" y="30">clk90_inv</text>
+    </symbol>
+    <symbol id="ipbktmodule_ddr_clk90_inv">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#000000; stroke-width:2"/>
+      <rect x="11" y="14" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="22">util_vector_logic</text>
+      <text class="bciplabel" x="45" y="30">ddr_clk90_inv</text>
+    </symbol>
+    <symbol id="ipbktmodule_dcm_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#000000; stroke-width:2"/>
+      <rect x="11" y="14" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="22">dcm_module</text>
+      <text class="bciplabel" x="45" y="30">dcm_0</text>
+      <rect x="11" y="34" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="48">J</text>
+    </symbol>
+    <symbol id="ipbktmodule_dcm_1">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#000000; stroke-width:2"/>
+      <rect x="11" y="14" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="22">dcm_module</text>
+      <text class="bciplabel" x="45" y="30">dcm_1</text>
+      <rect x="11" y="34" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="48">K</text>
+    </symbol>
+    <symbol id="ipbktmodule_chipscope_icon_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#000000; stroke-width:2"/>
+      <rect x="11" y="14" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="22">chipscope_icon</text>
+      <text class="bciplabel" x="45" y="30">chipscope_icon_0</text>
+    </symbol>
+    <symbol id="ipbucket">
+      <rect x="0" y="0" rx="4" ry="4" width="334" height="262" style="stroke-width:2; stroke:#000000; fill:#CCCCFF"/>
+      <use x="16" y="16" xlink:href="#ipbktmodule_reset_block"/>
+      <use x="122" y="16" xlink:href="#ipbktmodule_PS2_Ports_IO_ADAPTER"/>
+      <use x="228" y="16" xlink:href="#ipbktmodule_sysclk_inv"/>
+      <use x="16" y="98" xlink:href="#ipbktmodule_clk90_inv"/>
+      <use x="122" y="98" xlink:href="#ipbktmodule_ddr_clk90_inv"/>
+      <use x="228" y="98" xlink:href="#ipbktmodule_dcm_0"/>
+      <use x="16" y="180" xlink:href="#ipbktmodule_dcm_1"/>
+      <use x="122" y="180" xlink:href="#ipbktmodule_chipscope_icon_0"/>
+    </symbol>
+    <symbol id="symbol_opb2dcr_bridge_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="4" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="12">opb2dcr_bridge</text>
+      <text class="bciplabel" x="45" y="20">opb2dcr_bridge_0</text>
+      <use x="47" y="46" xlink:href="#DCR_Bif"/>
+      <text class="biflabel" x="63" y="57">MDCR</text>
+      <use x="11" y="46" xlink:href="#OPB_Bif"/>
+      <text class="biflabel" x="27" y="57">SOPB</text>
+    </symbol>
+    <symbol id="symbol_VGA_FrameBuffer">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="4" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="12">plb_tft_cntlr_ref</text>
+      <text class="bciplabel" x="45" y="20">VGA_FrameBuffer</text>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="16" style="fill:#CCCCFF; stroke:none;"/>
+      <text class="ioplblgrp" x="45" y="38">I</text>
+      <use x="11" y="46" xlink:href="#PLB_Bif"/>
+      <text class="biflabel" x="27" y="57">MPLB</text>
+      <use x="47" y="46" xlink:href="#DCR_Bif"/>
+      <text class="biflabel" x="63" y="57">SDCR</text>
+    </symbol>
+    <symbol id="buslanes_cstack_0_WEST">
+      <line x1="34" y1="102" x2="34" y2="250" style="stroke:#339900;stroke-width:1"/>
+      <use x="24" y="92" xlink:href="#OPB_busconn_SLAVE"/>
+      <line x1="10" y1="4" x2="10" y2="332" style="stroke:#FFAA33;stroke-width:1"/>
+      <use x="0" y="-6" xlink:href="#PLB_busconn_SLAVE"/>
+    </symbol>
+    <symbol id="buslines_cstack_0_WEST">
+      <line x1="34" y1="250" x2="59" y2="250" style="stroke:#339900;stroke-width:1"/>
+      <line x1="10" y1="332" x2="59" y2="332" style="stroke:#FFAA33;stroke-width:1"/>
+    </symbol>
+    <symbol id="buslanes_cstack_0_EAST">
+      <use x="4" y="240" xlink:href="#DCR_busconn_MASTER"/>
+      <use x="4" y="322" xlink:href="#DCR_busconn_SLAVE"/>
+      <use x="10" y="260" xlink:href="#DCR_BusArrowNorth"/>
+      <use x="10" y="314" xlink:href="#DCR_BusArrowSouth"/>
+      <rect x="12" y="268" height="50" width="4" style="stroke:none; fill:#6699FF"/>
+      <text class="p2pbuslabel" x="22" y="264">dcr_v29_0</text>
+    </symbol>
+    <symbol id="buslines_cstack_0_EAST">
+      <line x1="34" y1="250" x2="49" y2="250" style="stroke:#6699FF;stroke-width:1"/>
+      <line x1="34" y1="332" x2="49" y2="332" style="stroke:#6699FF;stroke-width:1"/>
+    </symbol>
+    <symbol id="cstack_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="164" style="fill:#CCCCCC; stroke:none;"/>
+      <use x="0" y="0" xlink:href="#symbol_opb2dcr_bridge_0"/>
+      <use x="0" y="82" xlink:href="#symbol_VGA_FrameBuffer"/>
+    </symbol>
+    <symbol id="cgroup_0">
+      <use x="139" y="0" xlink:href="#buslanes_cstack_0_EAST"/>
+      <use x="0" y="0" xlink:href="#buslanes_cstack_0_WEST"/>
+      <use x="48" y="196" xlink:href="#cstack_0"/>
+      <use x="94" y="0" xlink:href="#buslines_cstack_0_EAST"/>
+      <use x="0" y="0" xlink:href="#buslines_cstack_0_WEST"/>
+    </symbol>
+    <symbol id="symbol_ppc405_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="90" style="fill:#90001C; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="4" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="12">ppc405</text>
+      <text class="bciplabel" x="45" y="20">ppc405_0</text>
+      <use x="11" y="46" xlink:href="#XIL_Bif"/>
+      <text class="biflabel" x="27" y="57">JTAG</text>
+      <use x="47" y="66" xlink:href="#PLB_Bif"/>
+      <text class="biflabel" x="63" y="77">IPLB</text>
+      <use x="11" y="66" xlink:href="#PLB_Bif"/>
+      <text class="biflabel" x="27" y="77">DPLB</text>
+      <rect x="81" y="3" rx="3" ry="3" width="9" height="18" style="fill:#FF9900; stroke:none; stroke-width:1"/>
+      <line x1="81" y1="6" x2="90" y2="6" style="stroke:#000000;stroke-width:1"/>
+      <line x1="81" y1="10" x2="90" y2="10" style="stroke:#000000;stroke-width:1"/>
+      <text class="intrsymbol" x="83" y="20">0</text>
+    </symbol>
+    <symbol id="buslanes_ppc405_0_WEST">
+      <use x="72" y="116" xlink:href="#PLB_busconn_MASTER"/>
+      <line x1="82" y1="74" x2="82" y2="126" style="stroke:#FFAA33;stroke-width:1"/>
+      <line x1="58" y1="126" x2="58" y2="372" style="stroke:#FFAA33;stroke-width:1"/>
+      <use x="48" y="116" xlink:href="#PLB_busconn_SLAVE"/>
+      <line x1="34" y1="224" x2="34" y2="486" style="stroke:#339900;stroke-width:1"/>
+      <use x="24" y="214" xlink:href="#OPB_busconn_SLAVE"/>
+    </symbol>
+    <symbol id="buslines_ppc405_0_WEST">
+      <line x1="82" y1="74" x2="229" y2="74" style="stroke:#FFAA33;stroke-width:1"/>
+      <line x1="58" y1="372" x2="202" y2="372" style="stroke:#FFAA33;stroke-width:1"/>
+      <line x1="34" y1="486" x2="96" y2="486" style="stroke:#339900;stroke-width:1"/>
+    </symbol>
+    <symbol id="buslanes_ppc405_0_EAST">
+      <use x="4" y="116" xlink:href="#PLB_busconn_MASTER"/>
+      <line x1="14" y1="74" x2="14" y2="126" style="stroke:#FFAA33;stroke-width:1"/>
+    </symbol>
+    <symbol id="buslines_ppc405_0_EAST">
+      <line x1="34" y1="74" x2="181" y2="74" style="stroke:#FFAA33;stroke-width:1"/>
+    </symbol>
+    <symbol id="pstack_ppc405_0">
+      <rect x="0" y="0" rx="6" ry="6" width="334" height="792" style="fill:#CCCCCC; stroke:none;"/>
+      <use x="106" y="318" xlink:href="#sbsbucket_plb"/>
+      <text class="ipclass" x="106" y="314">SLAVES OF plb</text>
+      <use x="0" y="432" xlink:href="#sbsbucket_opb"/>
+      <text class="ipclass" x="0" y="428">SLAVES OF opb</text>
+      <use x="122" y="0" xlink:href="#symbol_ppc405_0"/>
+      <text class="ipclass" x="122" y="-4">PROCESSOR</text>
+    </symbol>
+    <symbol id="pgroup_ppc405_0">
+      <use x="431" y="0" xlink:href="#buslanes_ppc405_0_EAST"/>
+      <use x="0" y="0" xlink:href="#buslanes_ppc405_0_WEST"/>
+      <use x="96" y="0" xlink:href="#pstack_ppc405_0"/>
+      <use x="264" y="0" xlink:href="#buslines_ppc405_0_EAST"/>
+      <use x="0" y="0" xlink:href="#buslines_ppc405_0_WEST"/>
+    </symbol>
+    <symbol id="symbol_ppc405_1">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="70" style="fill:#90001C; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="4" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="12">ppc405</text>
+      <text class="bciplabel" x="45" y="20">ppc405_1</text>
+      <use x="47" y="46" xlink:href="#XIL_Bif"/>
+      <text class="biflabel" x="63" y="57">JTAG</text>
+    </symbol>
+    <symbol id="symbol_jtagppc_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="4" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="12">jtagppc_cntlr</text>
+      <text class="bciplabel" x="45" y="20">jtagppc_0</text>
+      <use x="47" y="46" xlink:href="#XIL_Bif"/>
+      <text class="biflabel" x="63" y="57">JTAG</text>
+      <use x="11" y="46" xlink:href="#XIL_Bif"/>
+      <text class="biflabel" x="27" y="57">JTAG</text>
+    </symbol>
+    <symbol id="mpstack_1">
+      <use x="0" y="0" xlink:href="#symbol_jtagppc_0"/>
+    </symbol>
+    <symbol id="buslanes_ppc405_1_WEST"/>
+    <symbol id="buslines_ppc405_1_WEST"/>
+    <symbol id="buslanes_ppc405_1_EAST"/>
+    <symbol id="buslines_ppc405_1_EAST"/>
+    <symbol id="pstack_ppc405_1">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="298" style="fill:#CCCCCC; stroke:none;"/>
+      <use x="0" y="0" xlink:href="#symbol_ppc405_1"/>
+      <text class="ipclass" x="0" y="-4">PROCESSOR</text>
+    </symbol>
+    <symbol id="pgroup_ppc405_1">
+      <use x="115" y="0" xlink:href="#buslanes_ppc405_1_EAST"/>
+      <use x="0" y="0" xlink:href="#buslanes_ppc405_1_WEST"/>
+      <use x="24" y="0" xlink:href="#pstack_ppc405_1"/>
+      <use x="70" y="0" xlink:href="#buslines_ppc405_1_EAST"/>
+      <use x="0" y="0" xlink:href="#buslines_ppc405_1_WEST"/>
+    </symbol>
+    <symbol id="symbol_idma_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFAA33; stroke-width:2"/>
+      <rect x="11" y="4" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="12">idma</text>
+      <text class="bciplabel" x="45" y="20">idma_0</text>
+      <use x="29" y="46" xlink:href="#PLB_Bif"/>
+      <text class="biflabel" x="45" y="57">MSPLB</text>
+    </symbol>
+    <symbol id="symbol_chipscope_plb_iba_0">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFAA33; stroke-width:2"/>
+      <rect x="11" y="4" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="12">chipscope_plb_iba</text>
+      <text class="bciplabel" x="45" y="20">chipscope_plb_iba_0</text>
+      <use x="29" y="46" xlink:href="#PLB_Bif"/>
+      <text class="biflabel" x="45" y="57">MON_</text>
+    </symbol>
+    <symbol id="symbol_plb_bram_if_cntlr_1_bram">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="24" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="32">bram_block</text>
+      <text class="bciplabel" x="45" y="40">plb_bram_if_cntlr_1_bram</text>
+      <use x="47" y="4" xlink:href="#XIL_Bif"/>
+      <text class="biflabel" x="63" y="15">PORTA</text>
+    </symbol>
+    <symbol id="symbol_plb_bram_if_cntlr_1">
+      <rect x="0" y="0" rx="6" ry="6" width="90" height="66" style="fill:#CCCCCC; stroke:#FFFFFF; stroke-width:2"/>
+      <rect x="11" y="4" rx="3" ry="3" width="68" height="38" style="fill:#FFFFFF; stroke:none;"/>
+      <text class="bciptype" x="45" y="12">plb_bram_if_cntlr</text>
+      <text class="bciplabel" x="45" y="20">plb_bram_if_cntlr_1</text>
+      <use x="11" y="46" xlink:href="#PLB_Bif"/>
+      <text class="biflabel" x="27" y="57">SPLB</text>
+      <use x="47" y="46" xlink:href="#XIL_Bif"/>
+      <text class="biflabel" x="63" y="57">PORTA</text>
+    </symbol>
+    <symbol id="symbol_peripheral_3">
+      <rect x="0" y="0" rx="6" ry="6" width="94" height="136" style="fill:#FFAA33; stroke:#FFAA33; stroke-width:2"/>
+      <use x="2" y="68" xlink:href="#symbol_plb_bram_if_cntlr_1_bram"/>
+      <use x="2" y="2" xlink:href="#symbol_plb_bram_if_cntlr_1"/>
+    </symbol>
+  </defs>
+  <rect x="0" y="0" width="2206" height="1667" style="fill:#FFFFFF; stroke:#000000;stroke-width:4"/>
+  <rect x="48" y="40" width="2110" height="1326" style="fill:#000088"/>
+  <rect x="64" y="56" width="2078" height="1294" rx="8" ry="8" style="fill:#CCCCCC"/>
+  <use x="32" y="511" xlink:href="#G_IOPort" transform="rotate(180,40,519)"/>
+  <text class="iopnumb" x="18" y="525">0<tspan class="iopgrp">GLB</tspan></text>
+  <use x="32" y="539" xlink:href="#G_IOPort" transform="rotate(180,40,547)"/>
+  <text class="iopnumb" x="18" y="553">1<tspan class="iopgrp">GLB</tspan></text>
+  <use x="32" y="567" xlink:href="#G_IOPort" transform="rotate(180,40,575)"/>
+  <text class="iopnumb" x="18" y="581">2<tspan class="iopgrp">GLB</tspan></text>
+  <use x="32" y="595" xlink:href="#G_IOPort" transform="rotate(0,40,603)"/>
+  <text class="iopnumb" x="18" y="609">3<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="623" xlink:href="#G_IOPort" transform="rotate(0,40,631)"/>
+  <text class="iopnumb" x="18" y="637">4<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="651" xlink:href="#G_IOPort" transform="rotate(180,40,659)"/>
+  <text class="iopnumb" x="18" y="665">5<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="679" xlink:href="#G_IOPort" transform="rotate(180,40,687)"/>
+  <text class="iopnumb" x="18" y="693">6<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="707" xlink:href="#G_IOPort" transform="rotate(180,40,715)"/>
+  <text class="iopnumb" x="18" y="721">7<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="735" xlink:href="#G_BIPort" transform="rotate(0,40,743)"/>
+  <text class="iopnumb" x="18" y="749">8<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="763" xlink:href="#G_BIPort" transform="rotate(0,40,771)"/>
+  <text class="iopnumb" x="18" y="777">9<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="791" xlink:href="#G_IOPort" transform="rotate(180,40,799)"/>
+  <text class="iopnumb" x="18" y="805">10<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="819" xlink:href="#G_IOPort" transform="rotate(180,40,827)"/>
+  <text class="iopnumb" x="18" y="833">11<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="847" xlink:href="#G_IOPort" transform="rotate(180,40,855)"/>
+  <text class="iopnumb" x="18" y="861">12<tspan class="iopgrp">B</tspan></text>
+  <rect x="909" y="1366" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="909" y="1366" xlink:href="#G_IOPort" transform="rotate(90,917,1374)"/>
+  <text class="iopnumb" x="917" y="1402">13<tspan class="iopgrp">B</tspan></text>
+  <rect x="937" y="1366" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="937" y="1366" xlink:href="#G_IOPort" transform="rotate(90,945,1374)"/>
+  <text class="iopnumb" x="945" y="1402">14<tspan class="iopgrp">B</tspan></text>
+  <rect x="965" y="1366" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="965" y="1366" xlink:href="#G_IOPort" transform="rotate(90,973,1374)"/>
+  <text class="iopnumb" x="973" y="1402">15<tspan class="iopgrp">B</tspan></text>
+  <rect x="993" y="1366" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="993" y="1366" xlink:href="#G_IOPort" transform="rotate(90,1001,1374)"/>
+  <text class="iopnumb" x="1001" y="1402">16<tspan class="iopgrp">B</tspan></text>
+  <rect x="1021" y="1366" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="1021" y="1366" xlink:href="#G_IOPort" transform="rotate(90,1029,1374)"/>
+  <text class="iopnumb" x="1029" y="1402">17<tspan class="iopgrp">B</tspan></text>
+  <use x="1049" y="1366" xlink:href="#G_BIPort" transform="rotate(0,1057,1374)"/>
+  <text class="iopnumb" x="1057" y="1402">18<tspan class="iopgrp">C</tspan></text>
+  <use x="1077" y="1366" xlink:href="#G_BIPort" transform="rotate(0,1085,1374)"/>
+  <text class="iopnumb" x="1085" y="1402">19<tspan class="iopgrp">D</tspan></text>
+  <use x="1105" y="1366" xlink:href="#G_BIPort" transform="rotate(0,1113,1374)"/>
+  <text class="iopnumb" x="1113" y="1402">20<tspan class="iopgrp">E</tspan></text>
+  <use x="1133" y="1366" xlink:href="#G_BIPort" transform="rotate(0,1141,1374)"/>
+  <text class="iopnumb" x="1141" y="1402">21<tspan class="iopgrp">E</tspan></text>
+  <use x="1161" y="1366" xlink:href="#G_BIPort" transform="rotate(0,1169,1374)"/>
+  <text class="iopnumb" x="1169" y="1402">22<tspan class="iopgrp">E</tspan></text>
+  <use x="1189" y="1366" xlink:href="#G_BIPort" transform="rotate(0,1197,1374)"/>
+  <text class="iopnumb" x="1197" y="1402">23<tspan class="iopgrp">E</tspan></text>
+  <use x="1217" y="1366" xlink:href="#G_BIPort" transform="rotate(0,1225,1374)"/>
+  <text class="iopnumb" x="1225" y="1402">24<tspan class="iopgrp">F</tspan></text>
+  <rect x="1245" y="1366" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="1245" y="1366" xlink:href="#G_IOPort" transform="rotate(-90,1253,1374)"/>
+  <text class="iopnumb" x="1253" y="1402">25<tspan class="iopgrp">G</tspan></text>
+  <use x="2158" y="511" xlink:href="#G_IOPort" transform="rotate(0,2166,519)"/>
+  <text class="iopnumb" x="2186" y="525">26<tspan class="iopgrp">G</tspan></text>
+  <use x="2158" y="539" xlink:href="#G_IOPort" transform="rotate(180,2166,547)"/>
+  <text class="iopnumb" x="2186" y="553">27<tspan class="iopgrp">H</tspan></text>
+  <use x="2158" y="567" xlink:href="#G_IOPort" transform="rotate(180,2166,575)"/>
+  <text class="iopnumb" x="2186" y="581">28<tspan class="iopgrp">H</tspan></text>
+  <use x="2158" y="595" xlink:href="#G_BIPort" transform="rotate(0,2166,603)"/>
+  <text class="iopnumb" x="2186" y="609">29<tspan class="iopgrp">H</tspan></text>
+  <use x="2158" y="623" xlink:href="#G_IOPort" transform="rotate(0,2166,631)"/>
+  <text class="iopnumb" x="2186" y="637">30<tspan class="iopgrp">H</tspan></text>
+  <use x="2158" y="651" xlink:href="#G_IOPort" transform="rotate(0,2166,659)"/>
+  <text class="iopnumb" x="2186" y="665">31<tspan class="iopgrp">H</tspan></text>
+  <use x="2158" y="679" xlink:href="#G_IOPort" transform="rotate(0,2166,687)"/>
+  <text class="iopnumb" x="2186" y="693">32<tspan class="iopgrp">H</tspan></text>
+  <use x="2158" y="707" xlink:href="#G_IOPort" transform="rotate(0,2166,715)"/>
+  <text class="iopnumb" x="2186" y="721">33<tspan class="iopgrp">H</tspan></text>
+  <use x="2158" y="735" xlink:href="#G_IOPort" transform="rotate(0,2166,743)"/>
+  <text class="iopnumb" x="2186" y="749">34<tspan class="iopgrp">I</tspan></text>
+  <use x="2158" y="763" xlink:href="#G_IOPort" transform="rotate(0,2166,771)"/>
+  <text class="iopnumb" x="2186" y="777">35<tspan class="iopgrp">I</tspan></text>
+  <use x="2158" y="791" xlink:href="#G_IOPort" transform="rotate(0,2166,799)"/>
+  <text class="iopnumb" x="2186" y="805">36<tspan class="iopgrp">I</tspan></text>
+  <use x="2158" y="819" xlink:href="#G_IOPort" transform="rotate(0,2166,827)"/>
+  <text class="iopnumb" x="2186" y="833">37<tspan class="iopgrp">I</tspan></text>
+  <use x="2158" y="847" xlink:href="#G_IOPort" transform="rotate(0,2166,855)"/>
+  <text class="iopnumb" x="2186" y="861">38<tspan class="iopgrp">I</tspan></text>
+  <use x="911" y="24" xlink:href="#G_IOPort" transform="rotate(-90,919,32)"/>
+  <text class="iopnumb" x="919" y="22">39<tspan class="iopgrp">I</tspan></text>
+  <use x="939" y="24" xlink:href="#G_IOPort" transform="rotate(-90,947,32)"/>
+  <text class="iopnumb" x="947" y="22">40<tspan class="iopgrp">I</tspan></text>
+  <use x="967" y="24" xlink:href="#G_IOPort" transform="rotate(90,975,32)"/>
+  <text class="iopnumb" x="975" y="22">41<tspan class="iopgrp">J</tspan></text>
+  <use x="995" y="24" xlink:href="#G_IOPort" transform="rotate(-90,1003,32)"/>
+  <text class="iopnumb" x="1003" y="22">42<tspan class="iopgrp">J</tspan></text>
+  <use x="1023" y="24" xlink:href="#G_IOPort" transform="rotate(-90,1031,32)"/>
+  <text class="iopnumb" x="1031" y="22">43<tspan class="iopgrp">J</tspan></text>
+  <use x="1051" y="24" xlink:href="#G_IOPort" transform="rotate(-90,1059,32)"/>
+  <text class="iopnumb" x="1059" y="22">44<tspan class="iopgrp">J</tspan></text>
+  <use x="1079" y="24" xlink:href="#G_IOPort" transform="rotate(-90,1087,32)"/>
+  <text class="iopnumb" x="1087" y="22">45<tspan class="iopgrp">J</tspan></text>
+  <use x="1107" y="24" xlink:href="#G_IOPort" transform="rotate(-90,1115,32)"/>
+  <text class="iopnumb" x="1115" y="22">46<tspan class="iopgrp">J</tspan></text>
+  <use x="1135" y="24" xlink:href="#G_IOPort" transform="rotate(-90,1143,32)"/>
+  <text class="iopnumb" x="1143" y="22">47<tspan class="iopgrp">J</tspan></text>
+  <use x="1163" y="24" xlink:href="#G_IOPort" transform="rotate(-90,1171,32)"/>
+  <text class="iopnumb" x="1171" y="22">48<tspan class="iopgrp">J</tspan></text>
+  <use x="1191" y="24" xlink:href="#G_IOPort" transform="rotate(90,1199,32)"/>
+  <text class="iopnumb" x="1199" y="22">49<tspan class="iopgrp">K</tspan></text>
+  <use x="1219" y="24" xlink:href="#G_BIPort" transform="rotate(0,1227,32)"/>
+  <text class="iopnumb" x="1227" y="22">50<tspan class="iopgrp">L</tspan></text>
+  <use x="1247" y="24" xlink:href="#G_IOPort" transform="rotate(90,1255,32)"/>
+  <text class="iopnumb" x="1255" y="22">51<tspan class="iopgrp">M</tspan></text>
+  <use x="197" y="321" xlink:href="#symbol_plb2opb"/>
+  <line x1="183" y1="309" x2="183" y2="375" style="stroke:#FFAA33;stroke-width:1"/>
+  <line x1="183" y1="375" x2="208" y2="375" style="stroke:#FFAA33;stroke-width:1"/>
+  <use x="173" y="299" xlink:href="#PLB_busconn_SLAVE"/>
+  <line x1="301" y1="375" x2="301" y2="407" style="stroke:#339900;stroke-width:1"/>
+  <line x1="301" y1="375" x2="276" y2="375" style="stroke:#339900;stroke-width:1"/>
+  <use x="291" y="397" xlink:href="#OPB_busconn_MASTER"/>
+  <use x="1111" y="183" xlink:href="#pgroup_ppc405_0"/>
+  <text class="procclass" x="1374" y="179">PROCESSOR</text>
+  <use x="731" y="203" xlink:href="#pgroup_ppc405_1"/>
+  <text class="procclass" x="800" y="199">PROCESSOR</text>
+  <use x="957" y="117" xlink:href="#mpstack_1"/>
+  <use x="1629" y="305" xlink:href="#cgroup_0"/>
+  <text class="ipclass" x="375" y="203">MASTER_SLAVE</text>
+  <use x="375" y="207" xlink:href="#symbol_idma_0"/>
+  <line x1="479" y1="261" x2="479" y2="305" style="stroke:#FFAA33;stroke-width:1"/>
+  <line x1="479" y1="261" x2="436" y2="261" style="stroke:#FFAA33;stroke-width:1"/>
+  <use x="469" y="299" xlink:href="#PLB_busconn_MASTER_SLAVE"/>
+  <text class="ipclass" x="553" y="203">MONITOR</text>
+  <use x="553" y="207" xlink:href="#symbol_chipscope_plb_iba_0"/>
+  <line x1="657" y1="261" x2="657" y2="305" style="stroke:#FFAA33;stroke-width:1"/>
+  <line x1="657" y1="261" x2="614" y2="261" style="stroke:#FFAA33;stroke-width:1"/>
+  <use x="647" y="299" xlink:href="#PLB_busconn_MONITOR"/>
+  <text class="ipclass" x="1879" y="497">MEMORY_UNIT</text>
+  <use x="1879" y="501" xlink:href="#symbol_peripheral_3"/>
+  <line x1="1865" y1="555" x2="1865" y2="305" style="stroke:#FFAA33;stroke-width:1"/>
+  <line x1="1865" y1="555" x2="1890" y2="555" style="stroke:#FFAA33;stroke-width:1"/>
+  <use x="1855" y="299" xlink:href="#PLB_busconn_SLAVE"/>
+  <text class="ipclass" x="936" y="1005">
+				IP
+		</text>
+  <use x="936" y="1009" xlink:href="#ipbucket"/>
+  <line x1="1340" y1="237" x2="1131" y2="237" style="stroke:#990066;stroke-width:1"/>
+  <line x1="1036" y1="171" x2="1131" y2="171" style="stroke:#990066;stroke-width:1"/>
+  <use x="1121" y="227" xlink:href="#XIL_busconn_TARGET"/>
+  <use x="1127" y="219" xlink:href="#XIL_BusArrowSouth"/>
+  <use x="1121" y="161" xlink:href="#XIL_busconn_INITIATOR"/>
+  <use x="1127" y="181" xlink:href="#XIL_BusArrowNorth"/>
+  <rect x="1129" y="189" width="4" height="30" style="stroke:none; fill:#990066"/>
+  <text class="mpbuslabel" x="1137" y="162">jtagppc_0_0</text>
+  <line x1="834" y1="257" x2="873" y2="257" style="stroke:#990066;stroke-width:1"/>
+  <line x1="873" y1="171" x2="968" y2="171" style="stroke:#990066;stroke-width:1"/>
+  <use x="863" y="247" xlink:href="#XIL_busconn_TARGET"/>
+  <use x="869" y="239" xlink:href="#XIL_BusArrowSouth"/>
+  <use x="863" y="161" xlink:href="#XIL_busconn_INITIATOR"/>
+  <use x="869" y="181" xlink:href="#XIL_BusArrowNorth"/>
+  <rect x="871" y="189" width="4" height="50" style="stroke:none; fill:#990066"/>
+  <text class="mpbuslabel" x="879" y="172">jtagppc_0_1</text>
+  <use x="109" y="305" xlink:href="#group_sharedBusses"/>
+  <use x="1690" y="1409" xlink:href="#BlkDiagram_Key"/>
+  <use x="48" y="1409" xlink:href="#BlkDiagram_Specs"/>
+</svg>

@@ -1,0 +1,203 @@
+#Please do not modify this file by hand
+XmpVersion: 8.1.02
+IntStyle: default
+MHS File: system.mhs
+MSS File: system.mss
+NPL File: projnav/system.ise
+Architecture: virtex2p
+Device: xc2vp30
+Package: ff896
+SpeedGrade: -7
+UseProjNav: 0
+AddToNPL: 0
+PNImportBitFile: 
+PNImportBmmFile: 
+UserCmd1: 
+UserCmd1Type: 0
+UserCmd2: 
+UserCmd2Type: 0
+TopInst: system_i
+SynProj: xst
+ReloadPbde: 0
+MainMhsEditor: 0
+InsertNoPads: 0
+WarnForEAArch: 1
+HdlLang: VHDL
+Simulator: mti
+SimModel: BEHAVIORAL
+SimXLib: 
+SimEdkLib: 
+MixLangSim: 1
+UcfFile: data/system.ucf
+FpgaImpMode: 0
+Processor: ppc405_0
+BootLoop: 0
+XmdStub: 0
+Processor: ppc405_1
+BootLoop: 0
+XmdStub: 0
+SwProj: libyggdrasil
+Processor: ppc405_0
+Executable: libyggdrasil/executable.elf
+Source: libyggdrasil/mm/malloc.c
+Source: libyggdrasil/system/kernel/debug.c
+Source: libyggdrasil/system/kernel/exceptions.c
+Source: libyggdrasil/system/kernel/kernel.c
+Source: libyggdrasil/system/kernel/queue.c
+Source: libyggdrasil/system/kernel/sched.c
+Source: libyggdrasil/system/kernel/task.c
+Source: libyggdrasil/system/kernel/int/buttons.c
+Source: libyggdrasil/system/kernel/int/intc.c
+Source: libyggdrasil/system/kernel/int/pit.c
+Source: libyggdrasil/system/kernel/int/ppctimer.c
+Source: libyggdrasil/system/kernel/int/program.c
+Source: libyggdrasil/system/kernel/syscalls/process.c
+Source: libyggdrasil/system/kernel/syscalls/syscalls.c
+Source: libyggdrasil/system/lib/debug_io/leds_io.c
+Source: libyggdrasil/system/lib/ps2/keyboard.c
+Source: libyggdrasil/system/lib/sound/sound.c
+Source: libyggdrasil/system/lib/vga/bitmap.c
+Source: libyggdrasil/system/lib/vga/console.c
+Source: libyggdrasil/system/lib/vga/graphic.c
+Source: libyggdrasil/system/lib/vga/sprites.c
+Source: libyggdrasil/mods/xvectors.S
+Source: libyggdrasil/system/kernel/asm/asm.S
+Source: libyggdrasil/system/kernel/int/timer_handler.S
+Source: libyggdrasil/system/kernel/syscalls/syscall_handler.S
+Source: libyggdrasil/system/lib/libdrasil/libdrasil.S
+Source: libyggdrasil/system/lib/vga/vga.S
+Source: libyggdrasil/foliage/leaf_graphic/leaf_graphic.cpp
+Source: libyggdrasil/foliage/start.cpp
+Source: libyggdrasil/foliage/overload_new_delete.cpp
+Source: libyggdrasil/foliage/foliage.cpp
+Source: libyggdrasil/main.c
+Source: libyggdrasil/pong.c
+Header: libyggdrasil/game.h
+Header: libyggdrasil/mm/malloc.c.h
+Header: libyggdrasil/mods/xreg405.h
+Header: libyggdrasil/system/init/main.h
+Header: libyggdrasil/system/kernel/debug.h
+Header: libyggdrasil/system/kernel/exceptions.h
+Header: libyggdrasil/system/kernel/kernel.h
+Header: libyggdrasil/system/kernel/queue.h
+Header: libyggdrasil/system/kernel/sched.h
+Header: libyggdrasil/system/kernel/sig.h
+Header: libyggdrasil/system/kernel/task.h
+Header: libyggdrasil/system/kernel/version.h
+Header: libyggdrasil/system/kernel/asm/asm.h
+Header: libyggdrasil/system/kernel/asm/ppc_machine.h
+Header: libyggdrasil/system/kernel/int/buttons.h
+Header: libyggdrasil/system/kernel/int/intc.h
+Header: libyggdrasil/system/kernel/int/pit.h
+Header: libyggdrasil/system/kernel/int/ppctimer.h
+Header: libyggdrasil/system/kernel/int/program.h
+Header: libyggdrasil/system/kernel/syscalls/syscall_fn.h
+Header: libyggdrasil/system/kernel/syscalls/syscalls.h
+Header: libyggdrasil/system/lib/debug_io/leds_io.h
+Header: libyggdrasil/system/lib/ps2/keyboard.h
+Header: libyggdrasil/system/lib/ps2/layouts/french.h
+Header: libyggdrasil/system/lib/sound/sound.h
+Header: libyggdrasil/system/lib/vga/bitmap.h
+Header: libyggdrasil/system/lib/vga/console.h
+Header: libyggdrasil/system/lib/vga/graphic.h
+Header: libyggdrasil/system/lib/vga/math.h
+Header: libyggdrasil/system/lib/vga/sprites.h
+Header: libyggdrasil/foliage/leaf_graphic/leaf_graphic.h
+Header: libyggdrasil/foliage/foliage.h
+Header: libyggdrasil/foliage/basic_types.h
+Header: libyggdrasil/foliage/settings.h
+Header: libyggdrasil/main.h
+DefaultInit: EXECUTABLE
+InitBram: 0
+Active: 1
+CompilerOptLevel: 2
+GlobPtrOpt: 0
+DebugSym: 0
+ProfileFlag: 0
+SearchIncl: C:/IGAM/testing_system/libyggdrasil/system
+LFlags: stdc++
+AsmOpt: 
+LinkOpt: 
+ProgStart: 
+StackSize: 
+HeapSize: 
+LinkerScript: libyggdrasil_linker_script.ld
+ProgCCFlags: 
+SwProj: bootloader
+Processor: ppc405_0
+Executable: bootloader/executable.elf
+Source: bootloader/src/bootloader.c
+Source: bootloader/void.s
+DefaultInit: EXECUTABLE
+InitBram: 1
+Active: 1
+CompilerOptLevel: 2
+GlobPtrOpt: 0
+DebugSym: 1
+ProfileFlag: 0
+AsmOpt: 
+LinkOpt: 
+ProgStart: 
+StackSize: 
+HeapSize: 
+LinkerScript: bootloader_linker_script.ld
+ProgCCFlags: 
+SwProj: test_son
+Processor: ppc405_0
+Executable: test_son/executable.elf
+Source: test_son/main.c
+Source: test_son/sound.c
+Source: test_son/asm.S
+Header: test_son/sound.h
+Header: test_son/asm.h
+Header: test_son/ppc_machine.h
+DefaultInit: executable
+InitBram: 0
+Active: 1
+CompilerOptLevel: 2
+GlobPtrOpt: 0
+DebugSym: 1
+ProfileFlag: 0
+AsmOpt: 
+LinkOpt: 
+ProgStart: 
+StackSize: 
+HeapSize: 
+LinkerScript: test_son_linker_script.ld
+ProgCCFlags: 
+SwProj: test_uart
+Processor: ppc405_0
+Executable: test_uart/executable.elf
+Source: test_uart/main.c
+DefaultInit: executable
+InitBram: 0
+Active: 1
+CompilerOptLevel: 2
+GlobPtrOpt: 0
+DebugSym: 1
+ProfileFlag: 0
+AsmOpt: 
+LinkOpt: 
+ProgStart: 
+StackSize: 
+HeapSize: 
+LinkerScript: test_uart_linker_script.ld
+ProgCCFlags: 
+SwProj: test_dma
+Processor: ppc405_0
+Executable: test_dma/executable.elf
+Source: test_dma/main.c
+DefaultInit: executable
+InitBram: 0
+Active: 1
+CompilerOptLevel: 2
+GlobPtrOpt: 0
+DebugSym: 1
+ProfileFlag: 0
+AsmOpt: 
+LinkOpt: 
+ProgStart: 
+StackSize: 
+HeapSize: 
+LinkerScript: test_dma_linker_script.ld
+ProgCCFlags: 

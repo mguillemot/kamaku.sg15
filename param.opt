@@ -1,0 +1,27 @@
+-- listing properties --
+c_use_control2=0
+c_use_control1=0
+c_user_scan_chain=1
+c_use_control0=1
+c_major_version=8
+c_core_type=1
+c_device_family=3
+c_use_ext_bscan=0
+c_num_control_ports=1
+c_use_jtag_bufg=1
+c_mfg_id=1
+c_use_control14=0
+c_use_control13=0
+c_use_control12=0
+c_use_control11=0
+c_use_control10=0
+c_use_unused_bscan=0
+c_use_control9=0
+c_minor_version=1
+c_use_control8=0
+c_use_control7=0
+c_use_control6=0
+c_use_control5=0
+c_use_control4=0
+c_use_control3=0
+c_build_revision=1
